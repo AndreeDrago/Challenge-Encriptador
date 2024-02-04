@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador Drago</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="Imagenes/Logo.png"
+        alt="Un pequeño niño con cuernos y alas de dragón"
+      />
+    </header>
+
+    <main>
+      <label for="areaTexto"></label>
+      <form id="miEncriptador">
+        <textarea
+          id="areaTexto"
+          rows="30"
+          cols="60"
+          placeholder="Ingresa tu texto aquí"
+        ></textarea>
+        <h1>Solo letras minúsculas sin acentos o caracteres especiales</h1>
+        <input type="button" value="Cifrar" onclick="cifrarTexto()" />
+        <input type="button" value="Descifrar" onclick="descifrarTexto()" />
+      </form>
+
+      <h3>Texto Transcrito</h3>
+      <p id="nuevoTexto"></p>
+      <input type="button" value="copiarTexto" onclick="copiarTexto()" />
+    </main>
+
+    <footer>
+      <img
+        src="Imagenes/Logo.png"
+        alt="Un pequeño niño con cuernos y alas de dragón"
+      />
+      <p>Andree Barrios Cisneros Castillo - 2024</p>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

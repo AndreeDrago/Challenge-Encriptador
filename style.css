@@ -1,0 +1,25 @@
+header img {
+    width: 20%;
+}
+
+textarea {
+    text-transform: lowercase;
+    resize: none;
+    border: none;
+}
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 1em;
+}
+
+footer img {
+    width: 20%;
+}
+
+footer p{
+    font-size: 13px;
+    color: white;
+    margin: 20px;
+}
