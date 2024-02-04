@@ -8,30 +8,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header></header>
+
+    <main>
       <img
         src="Imagenes/Logo.png"
         alt="Un pequeño niño con cuernos y alas de dragón"
       />
-    </header>
 
-    <main>
-      <label for="areaTexto"></label>
-      <form id="miEncriptador">
+      <form class="miEncriptador" id="miEncriptador">
         <textarea
+          class="areaTexto"
           id="areaTexto"
           rows="30"
           cols="60"
           placeholder="Ingresa tu texto aquí"
+          onkeypress="return ' abcdefghijklmnñopqrstuvwxyz'.includes(event.key)"
         ></textarea>
         <h1>Solo letras minúsculas sin acentos o caracteres especiales</h1>
         <input type="button" value="Cifrar" onclick="cifrarTexto()" />
         <input type="button" value="Descifrar" onclick="descifrarTexto()" />
       </form>
 
-      <h3>Texto Transcrito</h3>
-      <p id="nuevoTexto"></p>
-      <input type="button" value="copiarTexto" onclick="copiarTexto()" />
+      <section class="transcripcion">
+        <p id="nuevoTexto"></p>
+        <input
+          type="button"
+          value="copiarTexto"
+          class="copy"
+          onclick="copiarTexto()"
+        />
+      </section>
     </main>
 
     <footer>
