@@ -9,6 +9,7 @@ function cifrarTexto() {
     .replace(/u/g, 'ufat');
     // Mostrar el texto transcrito en otra área
     document.getElementById("nuevoTexto").innerText = textoCifrado;
+    document.getElementById("copy").style.display = 'block';
   }
 
 function descifrarTexto() {
@@ -22,6 +23,7 @@ function descifrarTexto() {
     .replace(/ufat/g, 'u');
     // Mostrar el texto transcrito en otra área
     document.getElementById("nuevoTexto").innerText = textoDescifrado;
+    document.getElementById("copy").style.display = 'block';
   }
 
 function copiarTexto() {
@@ -29,3 +31,5 @@ function copiarTexto() {
     let textoIngresado = document.querySelector("p").textContent;
     navigator.clipboard.writeText(textoIngresado);
 }
+
+document.getElementById("copy").style.display = 'none';

@@ -20,22 +20,44 @@
         <textarea
           class="areaTexto"
           id="areaTexto"
-          rows="30"
+          rows="15"
           cols="60"
           placeholder="Ingresa tu texto aquí"
           onkeypress="return ' abcdefghijklmnñopqrstuvwxyz'.includes(event.key)"
         ></textarea>
-        <h1>Solo letras minúsculas sin acentos o caracteres especiales</h1>
-        <input type="button" value="Cifrar" onclick="cifrarTexto()" />
-        <input type="button" value="Descifrar" onclick="descifrarTexto()" />
+        <div class="restriccion">
+          <img src="Imagenes/admiracion.png" alt="icono de advertencia" />
+          <h1>Solo letras minúsculas sin acentos o caracteres especiales</h1>
+        </div>
+
+        <div class="botonAccion">
+          <input
+            type="button"
+            class="cifrar"
+            value="Cifrar"
+            onclick="cifrarTexto()"
+          />
+          <input
+            type="button"
+            class="descifrar"
+            value="Descifrar"
+            onclick="descifrarTexto()"
+          />
+        </div>
       </form>
 
       <section class="transcripcion">
-        <p id="nuevoTexto"></p>
+        <textarea
+          name="nuevoTexto"
+          id="nuevoTexto"
+          cols="45"
+          rows="10"
+        ></textarea>
         <input
           type="button"
-          value="copiarTexto"
+          value="Copiar"
           class="copy"
+          id="copy"
           onclick="copiarTexto()"
         />
       </section>

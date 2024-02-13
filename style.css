@@ -1,26 +1,47 @@
-main {
-    background: #F3F5FC;
+main, .areaTexto{
+    background: #fcf3fc;
 }
 
 main img {
     vertical-align: top;
-    display: inline-block;
     width: 6%;
     padding: 1%;
 }
 
+input {
+    font-weight: bold;
+    padding: 0.5em;
+    font-size: 1.5em;
+    font-family: 'inter';
+    border: 2px solid #710a60;
+    border-radius: 15px;
+}
+
+input:hover {
+    box-shadow: 0px 5px 20px 0px rgba(255, 1, 221, 0.637);
+}
+
+input:active {
+    border-color: #ff00d4;
+    color: #ff00d4;
+}
+
 .miEncriptador {
     display: inline-block;
-    width: 60%;
-    margin: 6% 0 0 0;
-
+    width: 50%;
+    margin: 5% 0 0 5%;
 }
 
 .areaTexto {
     resize: none;
     border: none;
-    background: #F3F5FC;
     width: 90%;
+    font-size: 2em;
+    font-family: 'inter';
+}
+
+.areaTexto::placeholder{
+    color: #710a60;
 }
 
 .areaTexto:focus {
@@ -28,25 +49,68 @@ main img {
     outline: none;
 }
 
-.transcripcion {
-    margin: 3% 5%;
-    display: inline-block;
-    width: 20%;
-    background: white;
-    vertical-align: top;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 18px;
+.restriccion {
+    margin: 0 0 1% 0;
 }
 
-.transcripcion p {
-    height: 500px;
+.restriccion h1{
+    display: inline-block;
+    padding: 1%;
+    font-size: 1em;
+    color: #495057;
+}
+
+.restriccion img{
+    width: auto;
+}
+
+.botonAccion input{
+    width: 40%;
+    margin: 0 5% 9% 0;
+}
+
+.cifrar {
+    color: white;
+    background-color: #710a60;
+}
+
+.descifrar {
+    color: #710a60;
+    background-color: #fcf3fc;
+}
+
+.transcripcion {
+    vertical-align: top;
+    display: inline-block;
+    margin: 2% 6%;
+    padding: 1%;
+    width: 22%;
+    height: 700px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 20px 35px -1px rgba(54, 54, 54, 0.699);
+}
+
+#nuevoTexto {
+    resize: none;
+    border: none;
+    font-family: 'inter';
+    width: 100%;
+    height: 90%;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+#nuevoTexto:focus {
+    border: none;
+    outline: none;
 }
 
 .copy {
-    vertical-align: bottom;
-    margin: 0 20%;
-    width: 60%;
-    padding: 1em;
+    margin: 0 9%;
+    width: 80%;
+    background-color: white;
+    color: #710a60;
 }
 
 footer {
@@ -56,11 +120,11 @@ footer {
 }
 
 footer img {
-    width: 10%;
+    width: 15%;
 }
 
 footer p{
-    font-size: 0.5em;
+    font-size: 1em;
     color: white;
     margin: 2%px;
 }
