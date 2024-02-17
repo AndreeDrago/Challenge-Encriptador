@@ -7,6 +7,10 @@ function cambioDeEstado() {
   document.getElementById("nuevoTexto").style.display = 'block';
   document.getElementById("copy").style.display = 'block';
   document.getElementById("buscandoTexto").style.display = 'none';
+  if (screen.width<1025){
+  let nuevoTexto = document.getElementById('nuevoTexto');
+  nuevoTexto.style.height = (nuevoTexto.scrollHeight) + 'px'
+  } else {}
 }
 
 function cifrarTexto() {
@@ -41,6 +45,5 @@ function copiarTexto() {
     // Copiar texto
     navigator.clipboard.writeText(document.getElementById("nuevoTexto").textContent);
 }
-
 
 estadoInicial();
