@@ -2,7 +2,7 @@
 <html lang="es-MX">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
     <title>Encriptador Drago</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
@@ -14,14 +14,15 @@
       <img
         src="Imagenes/Logo.png"
         alt="Un pequeño niño con cuernos y alas de dragón"
+        class="logo"
       />
 
       <form class="miEncriptador" id="miEncriptador">
         <textarea
           class="areaTexto"
           id="areaTexto"
-          rows="15"
-          cols="60"
+          rows="auto"
+          cols="auto"
           placeholder="Ingresa tu texto aquí"
           onkeypress="return ' abcdefghijklmnñopqrstuvwxyz'.includes(event.key)"
         ></textarea>
@@ -50,9 +51,16 @@
         <textarea
           name="nuevoTexto"
           id="nuevoTexto"
-          cols="45"
-          rows="10"
+          onkeypress="return ''.includes(event.key)"
         ></textarea>
+        <div class="buscandoTexto" id="buscandoTexto">
+          <p>Seguimos buscando tu texto</p>
+          <img
+            src="Imagenes/Muñeco.png"
+            alt="Una persona con una lupa en la mano buscando en un diamante"
+          />
+          <p>Ingresa un texto para encriptar o desencriptar</p>
+        </div>
         <input
           type="button"
           value="Copiar"

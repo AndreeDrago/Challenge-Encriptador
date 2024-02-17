@@ -36,6 +36,7 @@ input:active {
     resize: none;
     border: none;
     width: 90%;
+    height: 550px;
     font-size: 2em;
     font-family: 'inter';
 }
@@ -106,12 +107,32 @@ input:active {
     outline: none;
 }
 
+.buscandoTexto {
+    width: 90%;
+    margin: 35% 5%;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.buscandoTexto p:first-of-type {
+    font-weight: bold;
+}
+
+.buscandoTexto img{
+    width: 100%;
+    margin: 10% 0;
+}
+
+
 .copy {
     margin: 0 9%;
     width: 80%;
     background-color: white;
     color: #710a60;
 }
+
+
+/** Pie de página */
 
 footer {
     background: black;
@@ -127,4 +148,93 @@ footer p{
     font-size: 1em;
     color: white;
     margin: 2%px;
+}
+
+/** Responsivo tablet*/
+
+@media screen and (max-width:1024px) {
+    .logo {
+        width: 20%;
+        margin: 5% auto;
+    }
+    
+    input {
+        font-size: 2em;
+    }
+
+    .miEncriptador {
+        display: block;
+        width: auto;
+        margin: auto;
+    }
+
+    .areaTexto {
+        width: 90%;
+        margin: 0 4.5%;
+        font-size: 3em;
+    }
+
+    .botonAccion input {
+        margin-bottom: auto;
+        margin-left: 4.5%;
+    }
+
+    .restriccion {
+        margin: 10% 5%;
+        font-size: 1.5em; 
+    }
+
+    .restriccion img {
+        width: 3%;
+    }
+
+    .transcripcion {
+        margin-top: 10%; 
+        width: 85%;
+        height: auto;
+    }
+
+    .buscandoTexto {
+        margin: 2% auto;
+        font-size: 2em;
+    }
+
+    .buscandoTexto img {
+        display: none;
+    }
+
+    #nuevoTexto {
+        font-size: 3em;
+    }
+
+    .copy {
+        margin: 5% auto;
+    }
+}
+
+/** Responsivo Celular */
+
+@media screen and (max-width:767px) {
+    .logo{
+        width: 40%;
+    }
+
+    .areaTexto {
+        height: 350px;
+    }
+
+    .restriccion h1 {
+        font-size: .6em;
+    }
+
+    .restriccion img {
+        width: 5%;
+    }
+
+    .botonAccion input {
+        width: 90%;
+        margin-bottom: 8%;
+    }
+
+    
 }

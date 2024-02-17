@@ -1,3 +1,14 @@
+function estadoInicial() {
+  document.getElementById("copy").style.display = 'none';
+  document.getElementById("nuevoTexto").style.display = 'none';
+}
+
+function cambioDeEstado() {
+  document.getElementById("nuevoTexto").style.display = 'block';
+  document.getElementById("copy").style.display = 'block';
+  document.getElementById("buscandoTexto").style.display = 'none';
+}
+
 function cifrarTexto() {
     // Obtener el texto ingresado por el usuario
     let textoIngresado = document.getElementById("areaTexto").value;
@@ -9,7 +20,7 @@ function cifrarTexto() {
     .replace(/u/g, 'ufat');
     // Mostrar el texto transcrito en otra área
     document.getElementById("nuevoTexto").innerText = textoCifrado;
-    document.getElementById("copy").style.display = 'block';
+    cambioDeEstado();
   }
 
 function descifrarTexto() {
@@ -23,13 +34,13 @@ function descifrarTexto() {
     .replace(/ufat/g, 'u');
     // Mostrar el texto transcrito en otra área
     document.getElementById("nuevoTexto").innerText = textoDescifrado;
-    document.getElementById("copy").style.display = 'block';
+    cambioDeEstado();
   }
 
 function copiarTexto() {
     // Copiar texto
-    let textoIngresado = document.querySelector("p").textContent;
-    navigator.clipboard.writeText(textoIngresado);
+    navigator.clipboard.writeText(document.getElementById("nuevoTexto").textContent);
 }
 
-document.getElementById("copy").style.display = 'none';
+
+estadoInicial();
